@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="40dp"
+     android:layout_width="40dp">
+    <!-- selected -->
+    <item android:state_selected="true"
+        android:drawable="@drawable/btn_menu_touch" />
+    <!-- pressed -->
+    <item android:state_pressed="true"
+        android:drawable="@drawable/btn_menu_touch" />
+    <!-- focused -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/btn_menu_touch" />
+    <!-- default -->
+    <item android:drawable="@drawable/btn_w_menu_nor" />
+</selector>

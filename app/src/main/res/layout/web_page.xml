@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    // Top Menu Bar
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="고도원의 아침편지"
+            android:textSize="20dp"
+            android:textColor="#fcfdfb"
+            android:id="@+id/mainpage_topTitle"
+            android:gravity = "center"
+            android:background="#AFC968" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_w_menu_nor"
+            android:id="@+id/mainpage_topLeftMenuBtn"
+            android:layout_gravity="left|center_vertical"
+            />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_refresh"
+            android:id="@+id/mainpage_topRightReloadBtn"
+            android:layout_gravity="right|center_vertical"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b7c886"></FrameLayout>
+
+    <ProgressBar android:id="@+id/pro"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:max="100" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webView"
+            android:layout_gravity="center_horizontal" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

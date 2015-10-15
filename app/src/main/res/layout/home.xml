@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="scheduleBtnClicked">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#54a5e6"
+            android:layout_gravity="left"
+            android:text="@string/kor_schedule"
+            android:layout_margin="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E5E8">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/left_drawer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#ecf1f4">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:id="@+id/leftmenu_loginFrame"
+                android:background="#e4e9ef"
+                android:layout_gravity="center_horizontal">
+
+                <FrameLayout
+                    android:layout_width="120dp"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/logo"
+                        android:id="@+id/profileImg" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/profile_mask2"
+                        android:id="@+id/profileImgMask" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="@string/member_name"
+                        android:textSize="20dp"
+                        android:textColor="#414242"
+                        android:gravity="bottom" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="top|right"
+                        android:background="@drawable/ic_cancel"
+                        android:onClick="closeBtnClicked"/>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.0"
+                android:onClick="scheduleBtnClicked">
+
+                <FrameLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/ic_menu_today"
+                        android:layout_marginRight="5dp" />
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:layout_weight=".8"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="0dip"
+                    android:textColor="#ffffff"
+                    android:layout_height="match_parent"
+                    android:text="@string/kor_schedule"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.0"
+                android:onClick="admingdwBtnClicked"
+                >
+
+                <FrameLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/ic_menu_list"/>
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:layout_weight=".8"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="0dip"
+                    android:textColor="#ffffff"
+                    android:layout_height="match_parent"
+                    android:text="@string/kor_admingdw"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.0"
+                android:onClick="checkLetterBtnClicked">
+
+                <FrameLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/ic_menu_picture"/>
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:layout_weight=".8"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="0dip"
+                    android:textColor="#ffffff"
+                    android:layout_height="match_parent"
+                    android:text="내일자 점검"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.0"
+                android:onClick="staticBtnClicked">
+
+                <FrameLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/ic_menu_reader"/>
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:layout_weight=".8"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="0dip"
+                    android:textColor="#ffffff"
+                    android:layout_height="match_parent"
+                    android:text="통계"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.0"
+                android:onClick="otherBoardBtnClicked">
+
+                <FrameLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/ic_menu_news"/>
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:layout_weight=".8"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="0dip"
+                    android:textColor="#ffffff"
+                    android:layout_height="match_parent"
+                    android:text="기타 게시판"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.0"
+                android:onClick="morningLetterCalendarBtnClicked">
+
+                <FrameLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/ic_menu_godowon"/>
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:layout_weight=".8"
+                    android:layout_gravity="center"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="0dip"
+                    android:textColor="#ffffff"
+                    android:layout_height="match_parent"
+                    android:text="아침편지 캘린더"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
