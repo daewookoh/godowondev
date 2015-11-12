@@ -6,6 +6,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.Uri;
@@ -58,6 +59,7 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
 
         // 초기실행시 기본설정값
         gocScheduleBtnClicked(dView); // 옹달샘 일정실행
+        //emailBtnClicked(dView);
     }
 
     // Fragment가 활성화되지 않은 상태에서도
@@ -195,14 +197,21 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
             sUrl = "http://www.godowon.com/m/surl.gdw?url=" + encodeUrl + "&gdw_mem_no=" + getString(R.string.gdw_mem_no) + "&goc_mem_no=" + getString(R.string.goc_mem_no);
         }
 
-        Bundle args = new Bundle();
-        args.putString("Title", title);
-        args.putString("Layout", layout);
-        args.putString("Url", sUrl);
-        Fragment detail = new WebViewFragment();
-        detail.setArguments(args);
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, detail).commit();
+        if(layout == "web_page") {
+            Bundle args = new Bundle();
+            args.putString("Title", title);
+            args.putString("Layout", layout);
+            args.putString("Url", sUrl);
+            Fragment detail = new WebViewFragment();
+            detail.setArguments(args);
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, detail).commit();
+        }
+        else if(layout == "os_web_page") {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(sUrl));
+            startActivity(i);
+        }
     }
 
 
@@ -233,7 +242,7 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
 
     public void emailBtnClicked(View view) {
         String title = getResources().getString(R.string.kor_email);
-        replaceFragment(title, "web_page", "http://www.godowon.com/admingdw/index.gdw?redirect=mail");
+        replaceFragment(title, "os_web_page", "http://www.godowon.com/admingdw/index.gdw?redirect=mail");
         dLayout.closeDrawer(dView);
     }
 
