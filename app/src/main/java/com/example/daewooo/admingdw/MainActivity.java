@@ -248,13 +248,13 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
 
     public void admingdwBtnClicked(View view) {
         String title = getResources().getString(R.string.kor_admingdw);
-        replaceFragment(title, "web_page", "http://www.godowon.com/m/admingdw/");
+        replaceFragment(title, "os_web_page", "http://www.godowon.com/m/admingdw/");
         dLayout.closeDrawer(dView);
     }
 
     public void admingdwPcBtnClicked(View view) {
         String title = getResources().getString(R.string.kor_admingdw_pc);
-        replaceFragment(title, "web_page", "http://www.godowon.com/admingdw/index.gdw");
+        replaceFragment(title, "os_web_page", "http://www.godowon.com/admingdw/index.gdw");
         dLayout.closeDrawer(dView);
     }
 
