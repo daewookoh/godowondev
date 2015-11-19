@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">아침지기</string>
-    <string name="member_name">고대우</string>
-    <string name="gdw_mem_no">2074781</string>
-    <string name="goc_mem_no">2</string>
+    <string name="member_name">김유정</string>
+    <string name="gdw_mem_no">1644982</string>
+    <string name="goc_mem_no">12898</string>
 
 <!--
     <string name="member_name">고대우</string>
@@ -26,8 +26,8 @@
     <string name="goc_mem_no">15820</string>
 
     <string name="member_name">김유정</string>
-    <string name="gdw_mem_no">2399188</string>
-    <string name="goc_mem_no">19774</string>
+    <string name="gdw_mem_no">1644982</string>
+    <string name="goc_mem_no">12898</string>
 
     <string name="member_name">신정우</string>
     <string name="gdw_mem_no">2693055</string>
@@ -69,5 +69,6 @@
     <string name="kor_app_finish_text">아침지기 앱을 종료하시겠습니까?</string>
     <string name="kor_yes">예</string>
     <string name="kor_no">아니오</string>
+    <string name="download_complete">다운로드 완료</string>
 
 </resources>
