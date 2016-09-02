@@ -1,76 +1,17 @@
 <resources>
-    <string name="app_name">아침지기</string>
-    <string name="member_name">김유정</string>
-    <string name="gdw_mem_no">1644982</string>
-    <string name="goc_mem_no">12898</string>
-
-<!--
+    <string name="app_name">Dev</string>
     <string name="member_name">고대우</string>
     <string name="gdw_mem_no">2074781</string>
     <string name="goc_mem_no">2</string>
 
-    <string name="member_name">이서영</string>
-    <string name="gdw_mem_no">2712367</string>
-    <string name="goc_mem_no">74646</string>
-
-    <string name="member_name">최호근</sring>
-    <string name="gdw_mem_no">2650232</string>
-    <string name="goc_mem_no">60536</string>
-
-    <string name="member_name">유명근</string>
-    <string name="gdw_mem_no">1</string>
-    <string name="goc_mem_no">23</string>
-
-    <string name="member_name">고도원</string>
-    <string name="gdw_mem_no">110018</string>
-    <string name="goc_mem_no">53</string>
-
-    <string name="member_name">조은주</string>
-    <string name="gdw_mem_no">2392579</string>
-    <string name="goc_mem_no">15820</string>
-
-    <string name="member_name">김유정</string>
-    <string name="gdw_mem_no">1644982</string>
-    <string name="goc_mem_no">12898</string>
-
-    <string name="member_name">신정우</string>
-    <string name="gdw_mem_no">2693055</string>
-    <string name="goc_mem_no">69857</string>
-
-    <string name="member_name">정효란</string>
-    <string name="gdw_mem_no">2693058</string>
-    <string name="goc_mem_no">69858</string>
-
-    <string name="member_name">송미령</string>
-    <string name="gdw_mem_no">1042289</string>
-    <string name="goc_mem_no">1027</string>
-
-    <string name="member_name">오유정</string>
-    <string name="gdw_mem_no">2491472</string>
-    <string name="goc_mem_no">32213</string>
-
-    <string name="member_name">김현</string>
-    <string name="gdw_mem_no">1313445</string>
-    <string name="goc_mem_no">1</string>
--->
     <string name="url_scheme">myscheme</string>
 
-    <string name="kor_admin">아침지기</string>
-    <string name="kor_goc_schedule">옹달샘 일정[모바일]</string>
-    <string name="kor_goc_schedule_pc">옹달샘 일정[PC]</string>
-    <string name="kor_email">이메일</string>
-    <string name="kor_admingdw">아침지기[모바일]</string>
-    <string name="kor_admingdw_pc">아침지기[PC]</string>
-    <string name="kor_schedule">스케쥴</string>
-    <!--string name="kor_morning_calendar">아침편지 캘린더</string-->
-    <string name="kor_check_letter">내일자 점검</string>
-    <string name="kor_other_board">기타 게시판</string>
-    <string name="kor_stat">통계</string>
-    <string name="kor_gdw_home">[PC]아침편지 홈</string>
-    <string name="kor_goc_home">[PC]옹달샘 홈</string>
+    <string name="dev">아침편지 개발자</string>
+    <string name="reservation_error_notice">중복예약</string>
+    <string name="additional_mail_notice">별도메일</string>
 
     <string name="kor_app_finish">앱 종료</string>
-    <string name="kor_app_finish_text">아침지기 앱을 종료하시겠습니까?</string>
+    <string name="kor_app_finish_text">Dev 앱을 종료하시겠습니까?</string>
     <string name="kor_yes">예</string>
     <string name="kor_no">아니오</string>
     <string name="download_complete">다운로드 완료</string>

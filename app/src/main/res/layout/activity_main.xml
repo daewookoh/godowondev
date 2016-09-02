@@ -72,7 +72,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:text="@string/kor_admin"
+                        android:text="@string/dev"
                         android:textSize="12dp"
                         android:textColor="#828486"
                         android:gravity="top"/>
@@ -98,7 +98,7 @@
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:onClick="gocScheduleBtnClicked">
+            android:onClick="resvErrBtnClicked">
 
             <TextView
                 android:layout_height="wrap_content"
@@ -108,9 +108,10 @@
                 android:layout_marginBottom="20dp"
                 android:textSize="17dp"
                 android:textColor="#54a5e6"
-                android:text="@string/kor_goc_schedule"/>
+                android:text="@string/reservation_error_notice"/>
 
-        </LinearLayout>
+            </LinearLayout>
+
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -122,7 +123,7 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:onClick="gocSchedulePCBtnClicked">
+                android:onClick="additionalMailBtnClicked">
 
                 <TextView
                     android:layout_height="wrap_content"
@@ -132,225 +133,10 @@
                     android:layout_marginBottom="20dp"
                     android:textSize="17dp"
                     android:textColor="#54a5e6"
-                    android:text="@string/kor_goc_schedule_pc"/>
+                    android:text="@string/additional_mail_notice"/>
 
             </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="emailBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#54a5e6"
-                    android:text="@string/kor_email"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="admingdwBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#54a5e6"
-                    android:text="@string/kor_admingdw"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="admingdwPcBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#54a5e6"
-                    android:text="@string/kor_admingdw_pc"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="scheduleBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#54a5e6"
-                    android:text="@string/kor_schedule"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="otherBoardBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#54a5e6"
-                    android:text="@string/kor_other_board"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="checkLetterBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#54a5e6"
-                    android:text="@string/kor_check_letter"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="statBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#54a5e6"
-                    android:text="@string/kor_stat"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="gdwHomeBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#414242"
-                    android:text="@string/kor_gdw_home"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#E0E5E8">
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="gocHomeBtnClicked">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:textSize="17dp"
-                    android:textColor="#414242"
-                    android:text="@string/kor_goc_home"/>
-
-            </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"

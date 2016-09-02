@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidAdminGDW.iml" filepath="$PROJECT_DIR$/AndroidAdminGDW.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gcmsender/gcmsender.iml" filepath="$PROJECT_DIR$/gcmsender/gcmsender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/godowondev.iml" filepath="$PROJECT_DIR$/godowondev.iml" />
     </modules>
   </component>
 </project>

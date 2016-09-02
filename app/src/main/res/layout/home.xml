@@ -7,15 +7,14 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="scheduleBtnClicked">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:textColor="#54a5e6"
             android:layout_gravity="left"
-            android:text="@string/kor_schedule"
+            android:text="@string/dev"
             android:layout_margin="15dp" />
 
     </LinearLayout>
@@ -113,7 +112,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1.0"
-                android:onClick="scheduleBtnClicked">
+                android:onClick="resvErrBtnClicked">
 
                 <FrameLayout
                     android:layout_width="0dip"
@@ -137,7 +136,7 @@
                     android:layout_width="0dip"
                     android:textColor="#ffffff"
                     android:layout_height="match_parent"
-                    android:text="@string/kor_schedule"/>
+                    android:text="@string/reservation_error_notice"/>
 
             </LinearLayout>
 
@@ -147,7 +146,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1.0"
-                android:onClick="admingdwBtnClicked"
+                android:onClick="additionalMailBtnClicked"
                 >
 
                 <FrameLayout
@@ -171,142 +170,10 @@
                     android:layout_width="0dip"
                     android:textColor="#ffffff"
                     android:layout_height="match_parent"
-                    android:text="@string/kor_admingdw"/>
+                    android:text="@string/additional_mail_notice"/>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1.0"
-                android:onClick="checkLetterBtnClicked">
-
-                <FrameLayout
-                    android:layout_width="0dip"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2">
-
-                    <ImageButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="right|center_vertical"
-                        android:background="@drawable/ic_menu_picture"/>
-
-                </FrameLayout>
-
-
-                <TextView
-                    android:layout_weight=".8"
-                    android:layout_gravity="center"
-                    android:gravity="left|center_vertical"
-                    android:layout_width="0dip"
-                    android:textColor="#ffffff"
-                    android:layout_height="match_parent"
-                    android:text="내일자 점검"/>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1.0"
-                android:onClick="staticBtnClicked">
-
-                <FrameLayout
-                    android:layout_width="0dip"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2">
-
-                    <ImageButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="right|center_vertical"
-                        android:background="@drawable/ic_menu_reader"/>
-
-                </FrameLayout>
-
-
-                <TextView
-                    android:layout_weight=".8"
-                    android:layout_gravity="center"
-                    android:gravity="left|center_vertical"
-                    android:layout_width="0dip"
-                    android:textColor="#ffffff"
-                    android:layout_height="match_parent"
-                    android:text="통계"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1.0"
-                android:onClick="otherBoardBtnClicked">
-
-                <FrameLayout
-                    android:layout_width="0dip"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2">
-
-                    <ImageButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="right|center_vertical"
-                        android:background="@drawable/ic_menu_news"/>
-
-                </FrameLayout>
-
-
-                <TextView
-                    android:layout_weight=".8"
-                    android:layout_gravity="center"
-                    android:gravity="left|center_vertical"
-                    android:layout_width="0dip"
-                    android:textColor="#ffffff"
-                    android:layout_height="match_parent"
-                    android:text="기타 게시판"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1.0"
-                android:onClick="morningLetterCalendarBtnClicked">
-
-                <FrameLayout
-                    android:layout_width="0dip"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2">
-
-                    <ImageButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="right|center_vertical"
-                        android:background="@drawable/ic_menu_godowon"/>
-
-                </FrameLayout>
-
-
-                <TextView
-                    android:layout_weight=".8"
-                    android:layout_gravity="center"
-                    android:gravity="left|center_vertical"
-                    android:layout_width="0dip"
-                    android:textColor="#ffffff"
-                    android:layout_height="match_parent"
-                    android:text="아침편지 캘린더"/>
-
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
