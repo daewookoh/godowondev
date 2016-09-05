@@ -280,8 +280,8 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
 
             //보안키 적용할경우
             //sUrl = "http://www.godowon.com/m/surl.gdw?url=" + encodeUrl + "&gdw_mem_no=" + getString(R.string.gdw_mem_no) + "&goc_mem_no=" + getString(R.string.goc_mem_no) + "&enc_key=" + encrypted;
-            //sUrl = "http://www.godowon.com/m/surl.gdw?url=" + encodeUrl + "&gdw_mem_no=" + getString(R.string.gdw_mem_no) + "&goc_mem_no=" + getString(R.string.goc_mem_no);
-            sUrl = url;
+            sUrl = "http://www.godowon.com/m/surl.gdw?url=" + encodeUrl + "&gdw_mem_no=" + getString(R.string.gdw_mem_no) + "&goc_mem_no=" + getString(R.string.goc_mem_no);
+            //sUrl = url;
         }
 
         if(layout == "web_page") {

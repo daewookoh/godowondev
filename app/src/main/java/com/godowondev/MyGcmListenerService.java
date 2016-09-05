@@ -135,7 +135,7 @@ public class MyGcmListenerService extends GcmListenerService {
             intent.putExtra("navi_type","additional_mail");
             //defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
 
-            sendSMS("01099989584", message);
+            //sendSMS("01099989584", message);
         } else {
             intent.putExtra("navi_type","reservation_error");
         }
