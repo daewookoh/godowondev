@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "592949828534",
+    "project_id": "godowonpush"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592949828534:android:4aa8acf11f77888f",
+        "android_client_info": {
+          "package_name": "com.godowondev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyHiIb7SiuANru8ZXoSqOIJ7b6r-djyFo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

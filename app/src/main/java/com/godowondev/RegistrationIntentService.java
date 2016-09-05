@@ -45,6 +45,7 @@ public class RegistrationIntentService extends IntentService {
     private static final String[] TOPICS = {"global"};
     private Handler mHandler = new Handler();
 
+    public static String token;
     public RegistrationIntentService() {
         super(TAG);
     }
@@ -61,7 +62,7 @@ public class RegistrationIntentService extends IntentService {
             // See https://developers.google.com/cloud-messaging/android/start for details on this file.
             // [START get_token]
             InstanceID instanceID = InstanceID.getInstance(this);
-            String token = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
+            token = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
                     GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
             // [END get_token]
             Log.i(TAG, "GCM Registration Token: " + token);
@@ -116,6 +117,8 @@ public class RegistrationIntentService extends IntentService {
         // - 파라미터의 값으로 한국어 등을 송신하는 경우는 URL 인코딩을 해야 함.
         try (OutputStream out = conn.getOutputStream()) {
             out.write("secret_key=bdkfasd".getBytes());
+            out.write("&".getBytes());
+            out.write(("mobile=" + getString(R.string.mobile)).getBytes());
             out.write("&".getBytes());
             out.write("app_name=godowondev".getBytes());
             out.write("&".getBytes());
