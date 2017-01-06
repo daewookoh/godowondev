@@ -101,7 +101,7 @@ public class RegistrationIntentService extends IntentService {
     @TargetApi(Build.VERSION_CODES.KITKAT)
     private void sendRegistrationToServer(String token) throws IOException {
 
-        URL url = new URL("http://t3.godowoncenter.com/sample/gcm_insert_token.goc");
+        URL url = new URL("http://bdkfasd.godowoncenter.com/sample/gcm_insert_token.goc");
 
         // HTTP 접속 구하기
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();

@@ -59,13 +59,13 @@ public class MyGcmListenerService extends GcmListenerService {
         Log.d(TAG, "From: " + from);
         Log.d(TAG, "Message: " + message);
         Log.d(TAG, "Token: " + RegistrationIntentService.token);
-
+/*
         try {
             answerToServer(RegistrationIntentService.token, "godowondev");
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+*/
         if (from.startsWith("/topics/")) {
             // message received from some topic.
         } else {

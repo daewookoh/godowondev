@@ -15,7 +15,7 @@
 
     <string name="dev">아침편지 개발자</string>
     <string name="reservation_error_notice">중복예약</string>
-    <string name="additional_mail_notice">별도메일</string>
+    <string name="additional_mail_notice">별도메일/뉴스레터</string>
 
     <string name="kor_app_finish">앱 종료</string>
     <string name="kor_app_finish_text">Dev 앱을 종료하시겠습니까?</string>

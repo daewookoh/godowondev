@@ -93,7 +93,7 @@
 
                 </FrameLayout>
             </LinearLayout>
-
+<!--
             <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
@@ -118,7 +118,7 @@
                 android:layout_height="2dp"
                 android:background="#E0E5E8">
             </LinearLayout>
-
+-->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"

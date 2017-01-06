@@ -100,11 +100,14 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
             startService(intent);
         //}
 
+        additionalMailBtnClicked(dView);
+/*
         if(navi_type.equals("additional_mail")) {
             additionalMailBtnClicked(dView);
         }else {
             resvErrBtnClicked(dView);
         }
+*/
     }
 
     @Override
@@ -314,14 +317,14 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
 
     public void resvErrBtnClicked(View view) {
         String title = getResources().getString(R.string.reservation_error_notice);
-        replaceFragment(title, "web_page", "http://t3.godowoncenter.com/sample/gcm_reservation_error_log.goc");
+        replaceFragment(title, "web_page", "http://bdkfasd.godowoncenter.com/sample/gcm_reservation_error_log.goc");
 
         dLayout.closeDrawer(dView);
     }
 
     public void additionalMailBtnClicked(View view) {
         String title = getResources().getString(R.string.additional_mail_notice);
-        replaceFragment(title, "web_page", "http://t3.godowoncenter.com/sample/gcm_additional_mail_alert_log.goc");
+        replaceFragment(title, "web_page", "http://beta3.godowon.com/test/additional_mail_list.gdw");
         dLayout.closeDrawer(dView);
     }
 
