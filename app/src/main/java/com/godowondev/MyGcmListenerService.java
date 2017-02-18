@@ -22,10 +22,14 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.NotificationCompat;
 import android.telephony.SmsManager;
 import android.util.Log;
@@ -84,7 +88,10 @@ public class MyGcmListenerService extends GcmListenerService {
          * In some cases it may be useful to show a notification indicating to the user
          * that a message was received.
          */
+
+
         sendNotification(message);
+
         // [END_EXCLUDE]
     }
     // [END receive_message]
@@ -131,9 +138,13 @@ public class MyGcmListenerService extends GcmListenerService {
 
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
-        if(message.startsWith("[ADDITIONAL_MAIL]")) {
+        if(message.startsWith("[ADDITIONAL_MAIL")) {
             intent.putExtra("navi_type","additional_mail");
             //defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
+            defaultSoundUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.wakeup);
+
+
+
 
             //sendSMS("01099989584", message);
         } else {
@@ -148,16 +159,43 @@ public class MyGcmListenerService extends GcmListenerService {
                 .setContentTitle("자동 PUSH 알림")
                 .setContentText(message)
                 .setAutoCancel(true)
-                .setSound(defaultSoundUri)
                 .setContentIntent(pendingIntent);
+
+        if(message.startsWith("[ADDITIONAL_MAIL_SMS")) {
+            notificationBuilder.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
+        }else if(message.startsWith("[ADDITIONAL_MAIL_RING")) {
+            AudioManager audiomanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+            audiomanager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+            notificationBuilder.setSound(defaultSoundUri);
+        }
+
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
         Notification note = notificationBuilder.build();
 
+        if(
+                (message.startsWith("[ADDITIONAL_MAIL_SMS_KYS]")
+                || message.startsWith("[ADDITIONAL_MAIL_RING_KYS]")
+                || message.startsWith("[ADDITIONAL_MAIL_RING_ALL]"))
+                && getResources().getString(R.string.member_name).equals("김용식")
+        )
+        {
+            notificationManager.notify(0 /* ID of notification */, note);
+        }
+
+        if(
+                (message.startsWith("[ADDITIONAL_MAIL_SMS_KDW]")
+                || message.startsWith("[ADDITIONAL_MAIL_RING_KDW]")
+                || message.startsWith("[ADDITIONAL_MAIL_RING_ALL]"))
+                && getResources().getString(R.string.member_name).equals("고대우")
+                )
+        {
+            notificationManager.notify(0 /* ID of notification */, note);
+        }
         //note.flags = Notification.FLAG_INSISTENT; // 알림을 반복하고 싶을경우 설정
-        notificationManager.notify(0 /* ID of notification */, note);
+        //notificationManager.notify(0 /* ID of notification */, note);
     }
 
     private void sendSMS(String phoneNumber, String message) {

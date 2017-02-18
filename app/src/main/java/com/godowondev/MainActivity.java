@@ -324,7 +324,13 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
 
     public void additionalMailBtnClicked(View view) {
         String title = getResources().getString(R.string.additional_mail_notice);
-        replaceFragment(title, "web_page", "http://beta3.godowon.com/test/additional_mail_list.gdw");
+        replaceFragment(title, "web_page", "http://www.godowon.com/test/additional_mail_list.gdw");
+        dLayout.closeDrawer(dView);
+    }
+
+    public void commentBtnClicked(View view) {
+        String title = getResources().getString(R.string.additional_mail_notice);
+        replaceFragment(title, "web_page", "http://www.godowon.com/test/mail_comment.gdw");
         dLayout.closeDrawer(dView);
     }
 
