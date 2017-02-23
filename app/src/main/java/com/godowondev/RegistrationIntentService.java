@@ -120,7 +120,7 @@ public class RegistrationIntentService extends IntentService {
             out.write("&".getBytes());
             out.write(("mobile=" + getString(R.string.mobile)).getBytes());
             out.write("&".getBytes());
-            out.write("app_name=godowondev".getBytes());
+            out.write("app_name=godowondevAndroid".getBytes());
             out.write("&".getBytes());
             out.write(("token=" + token).getBytes());
             out.write("&".getBytes());
