@@ -69,7 +69,7 @@ public class WebViewFragment extends Fragment implements SwipeRefreshLayout.OnRe
         // PullToRefresh 설정
         refreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.refresh);
         refreshLayout.setOnRefreshListener(this);
-        refreshLayout.setColorScheme(R.color.color1);
+        //refreshLayout.setColorScheme(R.color.color1);
         refreshLayout.setEnabled(false);  // 기능 사용/사용안함
 
 
@@ -178,7 +178,6 @@ public class WebViewFragment extends Fragment implements SwipeRefreshLayout.OnRe
                 return false;
             }
         });
-
         return view;
     }
 
@@ -192,5 +191,11 @@ public class WebViewFragment extends Fragment implements SwipeRefreshLayout.OnRe
                 uiCallback.onMenuButtonClicked();
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        webView.reload();
     }
 }

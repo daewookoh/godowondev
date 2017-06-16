@@ -178,6 +178,8 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
     // 웹페이지 Back이 가능할경우 웹페이지 이동
     // 웹페이지 Back이 불가능할 경우 앱 종료 확인
     public void appFinishCheck(){
+        finish();
+        /*
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle(R.string.kor_app_finish)
@@ -192,6 +194,7 @@ public class MainActivity extends Activity implements WebViewFragment.UiListener
                 })
                 .setNegativeButton(R.string.kor_no, null)
                 .show();
+                */
     }
 
     // *** uiCallback 함수

@@ -138,7 +138,7 @@ public class MyGcmListenerService extends GcmListenerService {
 
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
-        if(message.startsWith("[ADDITIONAL_MAIL")) {
+        if(message.startsWith("[ADDITIONAL_MAIL_RING")) {
             intent.putExtra("navi_type","additional_mail");
             //defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
             defaultSoundUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.wakeup);
@@ -162,7 +162,8 @@ public class MyGcmListenerService extends GcmListenerService {
                 .setContentIntent(pendingIntent);
 
         if(message.startsWith("[ADDITIONAL_MAIL_SMS")) {
-            notificationBuilder.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
+            //notificationBuilder.setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 });
+            notificationBuilder.setSound(defaultSoundUri);
         }else if(message.startsWith("[ADDITIONAL_MAIL_RING")) {
             AudioManager audiomanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
             audiomanager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
@@ -177,6 +178,7 @@ public class MyGcmListenerService extends GcmListenerService {
 
         if(
                 (message.startsWith("[ADDITIONAL_MAIL_SMS_KYS]")
+                        || message.startsWith("[ADDITIONAL_MAIL_SMS_ALL]")
                 || message.startsWith("[ADDITIONAL_MAIL_RING_KYS]")
                 || message.startsWith("[ADDITIONAL_MAIL_RING_ALL]"))
                 && getResources().getString(R.string.member_name).equals("김용식")
@@ -187,6 +189,7 @@ public class MyGcmListenerService extends GcmListenerService {
 
         if(
                 (message.startsWith("[ADDITIONAL_MAIL_SMS_KDW]")
+                        || message.startsWith("[ADDITIONAL_MAIL_SMS_ALL]")
                 || message.startsWith("[ADDITIONAL_MAIL_RING_KDW]")
                 || message.startsWith("[ADDITIONAL_MAIL_RING_ALL]"))
                 && getResources().getString(R.string.member_name).equals("고대우")
